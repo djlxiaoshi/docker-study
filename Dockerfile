@@ -1,6 +1,7 @@
 FROM node:latest as builder
 WORKDIR data
 COPY . .
+
 RUN npm install && \
     npm run build
 RUN rm -rf node_modules/
